@@ -166,5 +166,23 @@ namespace lab3
             this.type = newType;
             return new Temperature(newValue, newType);
         }
+
+        public static Temperature operator +(Temperature instance1, Temperature instance2)
+        {
+            var newValue = instance1.value + instance2.value;
+            return new Temperature(newValue, MeasureType.C);
+        }
+
+        public static Temperature operator -(Temperature instance1, Temperature instance2)
+        {
+            var newValue = instance1.value - instance2.value;
+            return new Temperature(newValue, MeasureType.C);
+        }
+
+        public static Temperature operator *(Temperature instance1, Temperature instance2)
+        {
+            var newValue = instance1.value * instance2.value;
+            return new Temperature(newValue, MeasureType.C);
+        }
     }
 }

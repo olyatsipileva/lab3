@@ -50,7 +50,7 @@
             this.cmbOperation.Size = new System.Drawing.Size(97, 24);
             this.cmbOperation.TabIndex = 0;
             this.cmbOperation.Text = "+";
-            this.cmbOperation.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbOperation.SelectedIndexChanged += new System.EventHandler(this.onValueChanged);
             // 
             // txtFirst
             // 
@@ -58,7 +58,7 @@
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(100, 22);
             this.txtFirst.TabIndex = 1;
-            this.txtFirst.TextChanged += new System.EventHandler(this.txtFirst_TextChanged);
+            this.txtFirst.TextChanged += new System.EventHandler(this.onValueChanged);
             // 
             // txtSecond
             // 
@@ -66,7 +66,7 @@
             this.txtSecond.Name = "txtSecond";
             this.txtSecond.Size = new System.Drawing.Size(100, 22);
             this.txtSecond.TabIndex = 2;
-            this.txtSecond.TextChanged += new System.EventHandler(this.txtSecond_TextChanged);
+            this.txtSecond.TextChanged += new System.EventHandler(this.onValueChanged);
             // 
             // txtResult
             // 
@@ -87,7 +87,8 @@
             this.cmbFirstType.Name = "cmbFirstType";
             this.cmbFirstType.Size = new System.Drawing.Size(37, 24);
             this.cmbFirstType.TabIndex = 4;
-            this.cmbFirstType.Text = "+";
+            this.cmbFirstType.Text = "C";
+            this.cmbFirstType.SelectedIndexChanged += new System.EventHandler(this.onValueChanged);
             // 
             // cmbSecondType
             // 
@@ -101,7 +102,8 @@
             this.cmbSecondType.Name = "cmbSecondType";
             this.cmbSecondType.Size = new System.Drawing.Size(37, 24);
             this.cmbSecondType.TabIndex = 5;
-            this.cmbSecondType.Text = "+";
+            this.cmbSecondType.Text = "C";
+            this.cmbSecondType.SelectedIndexChanged += new System.EventHandler(this.onValueChanged);
             // 
             // cmbResultType
             // 
@@ -115,7 +117,8 @@
             this.cmbResultType.Name = "cmbResultType";
             this.cmbResultType.Size = new System.Drawing.Size(37, 24);
             this.cmbResultType.TabIndex = 6;
-            this.cmbResultType.Text = "+";
+            this.cmbResultType.Text = "C";
+            this.cmbResultType.SelectedIndexChanged += new System.EventHandler(this.onValueChanged);
             // 
             // Form1
             // 

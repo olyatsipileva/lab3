@@ -55,7 +55,7 @@ namespace lab3
             return measureType;
         }
 
-        private void txtFirst_TextChanged(object sender, EventArgs e)
+        private void onValueChanged(object sender, EventArgs e)
         {
             try
             {
@@ -84,6 +84,14 @@ namespace lab3
                         // если минус, то вычитаем
                         sumTemp = firstTemperature - secondTempearature;
                         break;
+                    case "*":
+                        // если умножить, то умножаем
+                        sumTemp = firstTemperature * secondTempearature;
+                        break;
+                    case "=":
+                        string equality = firstTemperature % secondTempearature;
+                        txtResult.Text = equality;
+                        return;
                     default:
                         // а если что-то другое, то просто 0 выводим,
                         // такое маловероятно, но надо указать иначе не скомпилится
@@ -98,17 +106,6 @@ namespace lab3
                 // если тип преобразовать не смогли
                 txtResult.Text = "-";
             }
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtFirst_TextChanged(sender, e);
-        }
-
-        private void txtSecond_TextChanged(object sender, EventArgs e)
-        {
-            txtFirst_TextChanged(sender, e);
         }
     }
 }

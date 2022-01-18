@@ -169,19 +169,33 @@ namespace lab3
 
         public static Temperature operator +(Temperature instance1, Temperature instance2)
         {
-            var newValue = instance1.value + instance2.value;
+            var newValue = instance1.To(MeasureType.C).value + instance2.To(MeasureType.C).value;
             return new Temperature(newValue, MeasureType.C);
         }
 
         public static Temperature operator -(Temperature instance1, Temperature instance2)
         {
-            var newValue = instance1.value - instance2.value;
+            var newValue = instance1.To(MeasureType.C).value - instance2.To(MeasureType.C).value;
             return new Temperature(newValue, MeasureType.C);
+        }
+
+        public static string operator %(Temperature instance1, Temperature instance2)
+        {
+            if (instance1.To(MeasureType.C).value == instance2.To(MeasureType.C).value)
+            {
+                return "Равны";
+            }
+            if (instance1.To(MeasureType.C).value > instance2.To(MeasureType.C).value)
+            {
+                return "Первое больше";
+            }
+
+            return "Первое меньше";
         }
 
         public static Temperature operator *(Temperature instance1, Temperature instance2)
         {
-            var newValue = instance1.value * instance2.value;
+            var newValue = instance1.To(MeasureType.C).value * instance2.To(MeasureType.C).value;
             return new Temperature(newValue, MeasureType.C);
         }
     }
